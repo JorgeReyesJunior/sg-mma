@@ -35,7 +35,7 @@ function Carousel(props) {
   }
 
   return (
-    <section className="c-carousel">
+    <div className="c-carousel">
         <CarouselLeftArrow onClick={e => goToPrevSlide(e)} />
         <ul className="c-carousel__slides">
           {
@@ -47,16 +47,16 @@ function Carousel(props) {
           }
         </ul>
         <CarouselRightArrow onClick={e => goToNextSlide(e)} />
-        <ul className="c-carousel__indicators">
+        <ul className="c-carousel__indicators c-carousel__indicators--in-carousel">
           {
             props.slides.map((slide, i) => {
               return (
-                <CarouselIndicator key={i*i} index={i} activeSlide={activeSlide} setActiveSlide={setActiveSlide}/>
+                <CarouselIndicator key={i*i} index={i} activeSlide={activeSlide} setActiveSlide={setActiveSlide} />
               )
             })
           }
         </ul>
-    </section>
+    </div>
   );
 }
 
