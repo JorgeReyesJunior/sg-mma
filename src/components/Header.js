@@ -4,31 +4,23 @@ import MenuIcon from './MenuIcon';
 import Nav from './Nav';
 
 function Header() {
-  const [dropdownMenuState, setDropdownMenuState] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  /* TODO: Add animation/ css transition */
-  function toggleMenu() {
-    setDropdownMenuState(!dropdownMenuState);
+  const className = () => {
+    return isOpen ? "o-app__nav c-nav c-nav--is-open" : "o-app__nav c-nav"
   };
 
-  /* TODO: Add animation/ css transition */
-  function renderDropdownMenu() {
-    if (!dropdownMenuState) {
-      return null;
-    } else if(dropdownMenuState) {
-      return (
-        <Nav />
-      );
-    }
+  function toggleMenu() {
+    setIsOpen(!isOpen);
   };
   
   return (
     <Fragment>
       <header className="o-app__header">
         <Logo />
-        <MenuIcon isOpen={dropdownMenuState} toggleMenu={toggleMenu} />
-    </header>
-      { renderDropdownMenu() }
+        <MenuIcon isOpen={isOpen} toggleMenu={toggleMenu} />
+        <Nav navState={className} toggleMenu={toggleMenu} />
+      </header>
     </Fragment>
   )
 }
