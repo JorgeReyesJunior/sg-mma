@@ -6,7 +6,7 @@ import Nav from './Nav';
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const className = () => {
+  const navState = () => {
     return isOpen ? "o-app__nav c-nav c-nav--is-open" : "o-app__nav c-nav"
   };
 
@@ -19,7 +19,7 @@ function Header() {
       <header className="o-app__header">
         <Logo />
         <MenuIcon isOpen={isOpen} toggleMenu={toggleMenu} />
-        <Nav navState={className} toggleMenu={toggleMenu} />
+        <Nav navState={navState} toggleMenu={toggleMenu} />
       </header>
     </Fragment>
   )
