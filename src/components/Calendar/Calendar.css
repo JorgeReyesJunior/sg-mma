@@ -1,0 +1,112 @@
+.c-calendar {
+  background: lightcoral;
+  position: relative;
+  padding: 15px;
+}
+.c-calendar__title {
+  margin: 15px auto;
+  text-align: center;
+}
+.c-calendar__header {
+  background: lightgreen;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 15px auto;
+  padding: 15px;
+}
+.c-calendar__value {
+  width: 100%;
+  text-align: center;
+}
+
+/* Week Grid */
+.c-calendar__grid--week {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+}
+.c-calendar__grid-item {
+  padding: 5px;
+}
+.c-calendar__grid-item--current {
+  padding: 5px;
+  background: red;
+}
+.c-calendar__grid-item:nth-child(1) {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.c-calendar__grid-item:nth-child(2) {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.c-calendar__grid-item:nth-child(3) {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.c-calendar__grid-item:nth-child(4) {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.c-calendar__grid-item:nth-child(5) {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.c-calendar__grid-item:nth-child(6) {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.c-calendar__grid-item:nth-child(7) {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+/* Classes */
+.c-calendar__grid-classes:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.c-calendar__grid-classes:nth-child(2) {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.c-calendar__day {
+  width: 100%;
+  margin: 15px;
+  text-align: center;
+}
+.c-calendar__indicators {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 15px auto;
+}
+.c-calendar__body {
+  background: lightblue;
+  padding: 15px;
+  margin: 15px auto;
+}
+
+/** 
+ * 
+ * MEDIA Queries
+ *
+ * - IDEA: 300, 600, 900, 1200, 1500
+ *
+ **/
+/* Small devices */
+/* @media (min-width: 576px) {} */
+
+/* Medium devices */
+/* @media (min-width: 768px) {} */
+
+/* Large devices */
+/* @media (min-width: 992px) {} */
+
+/* Extra large devices */
+/* @media (min-width: 1200px) {} */
