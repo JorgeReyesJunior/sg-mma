@@ -1,35 +1,36 @@
 import React, { createRef } from 'react';
+import { Link } from "react-router-dom";
 
 function Nav(props) {
   const dropdownMenu = createRef();
-  const className = () => {
-    return props.navState()
+  
+  const navState = () => {
+    return props.navState();
   }
   
-  /* TODO: Map out page anchors */
   return (
-    <nav className={className()} ref={dropdownMenu}>
+    <nav className={navState()} ref={dropdownMenu}>
       <ul className="c-nav__list">
         <li className="c-nav__listing" onClick={props.toggleMenu}>
-          <a className="c-nav__anchor" href="#home">Home</a>
+          <Link to="/" className="c-nav__anchor">Home</Link>
         </li>
         <li className="c-nav__listing" onClick={props.toggleMenu}>
-          <a className="c-nav__anchor" href="#about">About</a>
+          <Link to="/about" className="c-nav__anchor">About</Link>
         </li>
         <li className="c-nav__listing" onClick={props.toggleMenu}>
-          <a className="c-nav__anchor" href="#curriculum">Curriculum</a>
+          <Link to="/#curriculum" className="c-nav__anchor">Curriculum</Link>
         </li>
         <li className="c-nav__listing" onClick={props.toggleMenu}>
-          <a className="c-nav__anchor" href="#schedule">Schedule</a>
+          <Link to="/#schedule" className="c-nav__anchor">Schedule</Link>
         </li>
         <li className="c-nav__listing" onClick={props.toggleMenu}>
-          <a className="c-nav__anchor" href="#news-and-events">News + Events</a>
+          <Link to="/news-and-events" className="c-nav__anchor">News + Events</Link>
         </li>
         <li className="c-nav__listing" onClick={props.toggleMenu}>
-          <a className="c-nav__anchor" href="#testimonials">Testimonials</a>
+          <Link to="/testimonials" className="c-nav__anchor">Testimonials</Link>
         </li>
         <li className="c-nav__listing" onClick={props.toggleMenu}>
-          <a className="c-nav__anchor" href="#shop">Shop</a>
+          <Link to="/shop" className="c-nav__anchor">Shop</Link>
         </li>
         <button className="c-nav__cta" onClick={props.toggleMenu}>Free Trial</button>
       </ul>
