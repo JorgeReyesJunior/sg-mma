@@ -1,55 +1,67 @@
-import React from 'react';
-import Banner1 from './components/Banners/Banner1';
-import Banner2 from './components/Banners/Banner2';
-import Banner3 from './components/Banners/Banner3';
-import Carousel from './components/Carousel/Carousel';
-import Curriculum from './components/Curriculum/Curriculum.js';
+import React, { useEffect } from 'react';
+import { Switch, Route, useLocation } from "react-router-dom";
+import About from './pages/About';
 import Header from './components/Header';
+import Home from './pages/Home';
+import NewsAndEvents from './pages/NewsAndEvents';
+import Shop from './pages/Shop';
+import Testimonials from './pages/Testimonials';
+
 import './App.css';
 
-/**
- * 
- * TODO:
- *  - Add slides for: BJJ, KIDS, Striking, Wrestling, Women's Self-defense.
- * 
- */
-const slides = [
-  { component: <Banner1 /> },
-  { component: <Banner2 /> },
-  { component: <Banner3 /> },
-  { component: <Banner1 /> },
-  { component: <Banner2 /> },
-];
-
 function App() {
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    let useEffectAborted = false;
+
+    function scrollToTop() {
+      window.scrollTo(0, 0)
+    };
+    function scrollToID() {
+      const id = hash.replace('#', '');
+      const element = document.getElementById(id);
+      
+      if (element) {
+        window.scrollTo({ top: element.offsetTop})
+      }
+    };
+
+    if(!useEffectAborted) {
+      (hash === '') ? scrollToTop() : scrollToID();
+    }
+
+    return (
+      () => {
+        useEffectAborted = true;
+      }
+    );
+  }, [pathname, hash]);
+
   return (
     <div className="o-app">
       <Header />
       <main className="o-app__main">
-        <section id="home">
-          <Carousel slides={slides} slideTime={5} />
-          <h1>Explore the Artemis Academy Programs</h1>
-          <p>Description.</p>
-        </section>
-        <Curriculum />
-        {/* TODO: Button will open/close content */}
-        {/* TODO: Make more cards */}
-        {/* <section>
-          <h1>What would you like?</h1>
-          <p>Join the family</p>
-          <button>Learn more</button>
-          <p>Learn Online</p>
-          <button>Learn more</button>
-          <p>Take a Test</p>
-          <button>Learn more</button>
-          <p>Become an Instructor</p>
-          <button>Learn more</button>
-          <p>Gear</p>
-          <button>Learn more</button>
-        </section> */}
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="/news-and-events">
+            <NewsAndEvents />
+          </Route>
+          <Route exact path="/shop">
+            <Shop />
+          </Route>
+          <Route exact path="/testimonials">
+            <Testimonials />
+          </Route>
+        </Switch>
       </main>
     </div>
   );
-}
+};
 
 export default App;
