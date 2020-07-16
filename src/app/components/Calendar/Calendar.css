@@ -1,0 +1,48 @@
+.c-calendar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: grey;
+}
+.c-calendar__title {
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  background: firebrick;
+}
+.c-calendar__header {
+  position: relative;
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  width: 100%;
+}
+.c-calendar__indicators,
+.c-calendar__controls {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 300px;
+}
+.c-calendar__body {
+  background: teal;
+}
+
+/** 
+ * 
+ * MEDIA Queries
+ *
+ * - IDEA: 300, 600, 900, 1200, 1500
+ *
+ **/
+/* Small devices */
+/* @media (min-width: 576px) {} */
+
+/* Medium devices */
+/* @media (min-width: 768px) {} */
+
+/* Large devices */
+/* @media (min-width: 992px) {} */
+
+/* Extra large devices */
+/* @media (min-width: 1200px) {} */

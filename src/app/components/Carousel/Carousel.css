@@ -1,0 +1,144 @@
+/*** Carousel ***/
+.c-carousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+.c-carousel__slides {
+  width: 100%;
+  list-style-type: none;
+}
+.c-carousel__arrow {
+  position: absolute;
+  top: 50%;
+  display: block;
+  cursor: pointer;
+  opacity: .75;
+  transform: translateY(-50%);
+  transition: opacity .15s cubic-bezier(.4, 0, 1, 1);
+  z-index: 3;
+}
+.c-carousel__arrow--icon {
+  height: auto;
+  width: 50px;
+}
+.c-carousel__arrow--right {
+  right: 0;
+}
+.c-carousel__arrow--right .c-carousel__arrow--icon {
+  transform: rotate(-90deg);
+}
+.c-carousel__arrow--left {
+  left: 0;
+}
+.c-carousel__arrow--left .c-carousel__arrow--icon {
+  transform: rotate(90deg);
+}
+.c-carousel__indicators {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 15px auto;
+  list-style: none;
+}
+.c-carousel__indicators--in-carousel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 3;
+  width: fit-content;
+}
+.c-carousel__indicator {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: var(--theme-black);
+  cursor: pointer;
+  opacity: .15;
+  transition: opacity .15s cubic-bezier(.4, 0, 1, 1);
+  border-radius: 100%;
+}
+.c-carousel__indicator:nth-of-type(n + 2) {
+  margin-left: 9px;
+}
+.c-carousel__indicator--active {
+  opacity: 1;
+  background-color: var(--theme-black);
+}
+
+/*** Slide ***/
+.c-carousel__slide {
+  display: none;
+  position: relative;
+}
+.c-carousel__slide-image {
+  max-height: 750px;
+}
+.c-carousel__slide--active {
+  display: block;
+}
+.c-carousel__slide-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1
+}
+.c-carousel__slide-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateY(40%);
+  text-align: center;
+  z-index: 2;
+}
+.c-carousel__slide-title {
+  width: fit-content;
+  padding: 10px 15px;
+  color: var(--theme-white);
+  background: firebrick;
+}
+.c-carousel__slide-cta {
+  margin: 15px auto;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+.c-carousel__slide-cta:hover {
+  background: firebrick;
+  color: var(--theme-white);;
+}
+
+/** 
+ * 
+ * MEDIA Queries
+ *
+ * - IDEA: 300, 600, 900, 1200, 1500
+ *
+ **/
+/* Small devices */
+@media (min-width: 576px) {
+  .c-carousel__arrow--right {
+    right: 15px;
+  }
+  .c-carousel__arrow--left {
+    left: 15px;
+  }
+}
+
+/* Medium devices */
+/* @media (min-width: 768px) {} */
+
+/* Large devices */
+/* @media (min-width: 992px) {} */
+
+/* Extra large devices */
+/* @media (min-width: 1200px) {} */

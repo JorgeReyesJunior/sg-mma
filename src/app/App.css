@@ -1,0 +1,44 @@
+/*** App ***/
+.o-app {
+  position: relative;
+  background: var(--theme-white);
+}
+.o-app__header {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 15px;
+  background: var(--theme-white);
+  z-index: 999;
+}
+.o-app__logo {
+  flex-grow: 1;
+  text-align: center;
+  border-radius: 4px;
+}
+.o-app__menu {
+  text-align: center;
+  border-radius: 4px;
+}
+.o-app__logo--icon,
+.o-app__menu--icon {
+  height: auto;
+  width: 50px;
+  border-radius: 4px;
+}
+.o-app__logo--icon:hover,
+.o-app__menu--icon:hover {
+  padding: 2px;
+  background-color: var(--theme-grey);
+}
+.o-app__nav {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--theme-grey);
+}
+.o-app__main {
+  position: relative;
+  top: 85px;
+}
