@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import CalendarMonths from './CalendarMonths';
-import CalendarWeek from './CalendarWeekdays';
 import CalendarWeekView from './CalendarWeekView';
 import './Calendar.css';
 
@@ -30,11 +28,7 @@ function Calendar() {
   if (dateObj) {
     return (
       <section id="schedule">
-        <CalendarWeekView
-          dateObj={dateObj}
-          months={CalendarMonths}
-          week={CalendarWeek}
-        />
+        <CalendarWeekView dateObj={dateObj} />
       </section>
     );
   } else {
