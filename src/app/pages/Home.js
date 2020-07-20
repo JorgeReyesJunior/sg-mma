@@ -20,7 +20,7 @@ function Home() {
       <Program
         programs={ProgramMap}
       />
-      {/* <Calendar /> */}
+      <Calendar />
     </section>
   )
 };
