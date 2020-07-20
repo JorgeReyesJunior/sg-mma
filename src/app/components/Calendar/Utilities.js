@@ -1,8 +1,8 @@
-import CalendarMonths from './CalendarMonths';
-import CalendarWeekdays from './CalendarWeekdays';
 import ClassSchedule from '../../../assets/data/ScheduleMap';
 
-/*** Calendar Helper functions ***/
+const calendarMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const calendarWeekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
 function getAllClasses(schedule) {
   let allScheduledClasses = [];
 
@@ -18,10 +18,10 @@ function getAllClasses(schedule) {
   return classList;
 }
 function getCalendarMonth(month) {
-  return CalendarMonths[month];
+  return calendarMonths[month];
 }
 function getCalendarWeekday(day) {
-  return CalendarWeekdays[day];
+  return calendarWeekdays[day];
 }
 function getAllClassesByKey(schedule, key) {
   const classList = [...new Map(schedule.map(item => [item[key], item])).values()];
@@ -39,7 +39,11 @@ function getCurrentWeekData(dateObj) {
     let day = new Date(dateObj.getUTCFullYear(), dateObj.getUTCMonth(), i);
 
     // Week UI is Mon-Sun, so, first day of the week is Monday instead of Sunday,so, getDay() - 1.
-    let schedule = ClassSchedule.get(day.getDay() - 1);
+    let schedule = ClassSchedule.get(day.getDay() - 1) ? ClassSchedule.get(day.getDay() - 1) : [{}]
+    console.log("currentWeekData schdeul: ", schedule);
+
+    let filteredDaySchedule = getFilteredDaySchedule(schedule);
+    console.log(filteredDaySchedule)
 
     if (!schedule) {
       currentWeekData.push({ day, schedule });
@@ -71,84 +75,47 @@ function getLastDayOfWeek(dateObj) {
   return new Date(dateObj.setDate(date));
 }
 function getTruncatedCalendarWeekday(day) {
-  return CalendarWeekdays[day].substring(0,3);;
+  return calendarWeekdays[day].substring(0,3);;
 }
 
 
 // TODO 
-function getClassSchedule(schedule) {
-  const courseList = [];
-  const courseNames = schedule.map((course) => {
-    return course.name;
-  })
-  const filteredCourses = [...new Set(courseNames)]
+function getFilteredDaySchedule(daySchedule) {
+  let catalog = [];
+  let schedule = daySchedule;
 
-  console.log("IN courseNames;", courseNames)
-  console.log("IN filteredCourses;", filteredCourses)
+  schedule.forEach((course, i) => {
+    let { startTime, endTime } = course;
+    let catalogedCourses = catalog.filter((item, i) => {
+      return course.name === item.name;
+    });
 
-  let merged = [];
-  
-  for(let i = 0; i < schedule.length; i++) {
-    let currentClass = schedule[i].name;
-    // console.log("currentClass: ", currentClass)
-    // console.log("items: ", filteredCourses[i], schedule[i])
-    
+    if (catalogedCourses.length) {
+      let catalogedCourseIndex = catalog.indexOf(catalogedCourses[0]);
+      let catalogedCourseSchedule = catalog[catalogedCourseIndex].scheduleTimes;
+      let newTime = { startTime, endTime } 
 
-    if(merged.includes(currentClass)) {
-      const find = merged.find((item, i) => {
-        return i
-      })
-      console.log("contains;", currentClass)
+      catalogedCourseSchedule.push(newTime);
+
     } else {
-      merged.push(currentClass)
+      let scheduleTimes = [{ startTime, endTime}];
+      
+      catalog.push({...course, scheduleTimes, filtered: true});
     }
-
-    // if(schedule[i].name === currentClass && ) {
-    //   console.log("Matched: ", currentClass);
-    //   merged.push({
-    //     currentClass
-    //   })
-    // }
-    // merged.push({
-    //  ...filteredCourses[i],
-    //  ...(courses.find((itmInner) => itmInner.name === filteredCourses[i]))
-    // });
-  }
   
-  console.log("Merged: ", merged);
+  })
 
-
-
-  // const courseTimes = schedule.map((course, i) => {
-  //   console.log("DeepIN: ", course, schedule[i])
-  //   if(schedule[i].name === course) {
-  //     const {name, startTime, endTime} = schedule[i];
-
-  //     return {name, startTime, endTime};
-  //   }
-    
-  //   return null;
-  // })
-  // .filter((course) => {
-  //   return course;
-  // });
-
-  // console.log("IOUTN ;", courseTimes)
-  console.log("OUT ;", courseList)
-
-  return courseList;
+  return catalog;
 }
 
 // TODO 
-let monday =  ClassSchedule.get(0);
-const allClasses = getAllClasses(ClassSchedule);
-const classListByName = getAllClassesByKey(allClasses, 'name');
-const filteredSchedule = getClassSchedule(monday);
+// let monday =  ClassSchedule.get(0);
+// const allClasses = getAllClasses(ClassSchedule);
+// const allClassesFilteredbyName = getAllClassesByKey(allClasses, 'name');
+// const filteredDaySchedule = getFilteredDaySchedule(monday);
 
-// console.log("allClasses: ", allClasses);
-// console.log("classListByName: ", classListByName);
 // console.log("classListByStartTime: ", classListByStartTime);
-console.log("getClassSchedule: ", filteredSchedule);
+// console.log("Final filteredDaySchedule: ", monday, filteredDaySchedule);
 
 
 // TODO
@@ -168,12 +135,12 @@ function getPreviousWeekData(dateObj) {
 }
 
 export {
-  classListByName,
+  // allClassesFilteredbyName,
   getCalendarMonth,
   getCalendarWeekday,
-  getClassSchedule,
   getCurrentWeekData,
   getDaysInMonth,
+  getFilteredDaySchedule,
   getNextWeekData,
   getPreviousWeekData,
   getTruncatedCalendarWeekday
