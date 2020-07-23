@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d6a3e6c3e10858c4e2bc33e3b8c3edf1",
+    "revision": "da5b5423f8010a18ff0b40ad3de2593a",
     "url": "/artemis-academy/index.html"
   },
   {
-    "revision": "a3f2ef709f702c9ab6fd",
-    "url": "/artemis-academy/static/css/main.8c089075.chunk.css"
+    "revision": "2a1fb3968bebbc3dd0ab",
+    "url": "/artemis-academy/static/css/main.07527b53.chunk.css"
   },
   {
     "revision": "adb9abaa5e7d05a88363",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/artemis-academy/static/js/2.964c4723.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a3f2ef709f702c9ab6fd",
-    "url": "/artemis-academy/static/js/main.e5aacfc2.chunk.js"
+    "revision": "2a1fb3968bebbc3dd0ab",
+    "url": "/artemis-academy/static/js/main.e3703ac0.chunk.js"
   },
   {
     "revision": "938bbe4ec5285b03bba8",

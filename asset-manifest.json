@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/artemis-academy/static/css/main.8c089075.chunk.css",
-    "main.js": "/artemis-academy/static/js/main.e5aacfc2.chunk.js",
-    "main.js.map": "/artemis-academy/static/js/main.e5aacfc2.chunk.js.map",
+    "main.css": "/artemis-academy/static/css/main.07527b53.chunk.css",
+    "main.js": "/artemis-academy/static/js/main.e3703ac0.chunk.js",
+    "main.js.map": "/artemis-academy/static/js/main.e3703ac0.chunk.js.map",
     "runtime-main.js": "/artemis-academy/static/js/runtime-main.ff583e63.js",
     "runtime-main.js.map": "/artemis-academy/static/js/runtime-main.ff583e63.js.map",
     "static/js/2.964c4723.chunk.js": "/artemis-academy/static/js/2.964c4723.chunk.js",
     "static/js/2.964c4723.chunk.js.map": "/artemis-academy/static/js/2.964c4723.chunk.js.map",
     "index.html": "/artemis-academy/index.html",
-    "precache-manifest.a7e711eca31eee614cf7d9919ef1ff2e.js": "/artemis-academy/precache-manifest.a7e711eca31eee614cf7d9919ef1ff2e.js",
+    "precache-manifest.b954ecbda3b6efc0b5fe1603a5d02e52.js": "/artemis-academy/precache-manifest.b954ecbda3b6efc0b5fe1603a5d02e52.js",
     "service-worker.js": "/artemis-academy/service-worker.js",
-    "static/css/main.8c089075.chunk.css.map": "/artemis-academy/static/css/main.8c089075.chunk.css.map",
+    "static/css/main.07527b53.chunk.css.map": "/artemis-academy/static/css/main.07527b53.chunk.css.map",
     "static/js/2.964c4723.chunk.js.LICENSE.txt": "/artemis-academy/static/js/2.964c4723.chunk.js.LICENSE.txt",
     "static/media/chevron-icon.svg": "/artemis-academy/static/media/chevron-icon.4140ff2e.svg",
     "static/media/close-icon.svg": "/artemis-academy/static/media/close-icon.40e9c520.svg",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.ff583e63.js",
     "static/js/2.964c4723.chunk.js",
-    "static/css/main.8c089075.chunk.css",
-    "static/js/main.e5aacfc2.chunk.js"
+    "static/css/main.07527b53.chunk.css",
+    "static/js/main.e3703ac0.chunk.js"
   ]
 }
