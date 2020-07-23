@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  background: grey;
+  background: teal;
 }
 .c-calendar__title {
   width: 100%;
@@ -13,12 +13,11 @@
 .c-calendar__header {
   position: relative;
   display: flex;
-  /* flex-wrap: wrap; */
   flex-direction: column;
   width: 100%;
+  background: darkgray;
 }
-.c-calendar__indicators,
-.c-calendar__controls {
+.c-calendar__indicators {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -29,8 +28,102 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  padding: 15px;
-  background: teal;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.c-calendar__courselist {
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+.c-calendar__courselist,
+.c-calendar__schedule,
+.c-calendar__weekday {
+  display: grid;
+}
+.c-calendar__courselist .c-calendar__course:nth-child(1) .c-calendar__course-name {
+  visibility: hidden;
+}
+.c-calendar__weekday .c-weekday:nth-child(1) {
+  background: firebrick;
+  width: 100%;
+}
+.c-calendar__schedule {
+  width: 100%;
+}
+.c-calendar__weekday {
+  width: 100%;
+  border-right: 1px solid black;
+}
+.c-calendar__course,
+.c-weekday {
+  display: grid;
+  padding: 10px;
+  text-align: center;
+}
+.c-calendar__weekday .c-weekday:nth-child(odd) {
+  background: darkgrey;
+  width: 100%;
+}
+.c-calendar__weekday .c-weekday:nth-child(even) {
+  background: grey;
+}
+.c-calendar__weekday .c-weekday:nth-child(1) {
+  background: firebrick;
+}
+.c-calendar__course-name,
+.c-weekday__name,
+.c-weekday__courses {
+  align-self: center;
+}
+.c-weekday__courses {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+.c-weekday__course-schedule {
+  margin: 10px auto;
+}
+.c-weekday__course-times {
+  background: lightgray;
+  padding: 5px;
+}
+
+/** small screen **/
+.c-weekday.c-weekday--s-screen  {
+  padding: 0 15px;
+}
+.c-weekday--s-screen {
+  grid-template-columns: repeat(12, 1fr);
+  width: 100%;
+  align-items: center;
+}
+.c-weekday--s-screen .c-weekday__course {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  display: grid;
+  width: 100%;
+  height: 100%;
+}
+.c-weekday--s-screen .c-weekday__course-name {
+  align-self: center;
+}
+.c-weekday--s-screen .c-weekday__schedule {
+  grid-column-start: 6;
+  grid-column-end: 12;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 25%;
+  list-style: none;
+  border-left: 1px solid black;
+}
+.c-weekday--s-screen .c-weekday__times {
+  align-self: center;
+  margin: 10px auto;
+  padding: 5px;
+  background: lightgray
 }
 
 /** 
@@ -44,7 +137,25 @@
 /* @media (min-width: 576px) {} */
 
 /* Medium devices */
-/* @media (min-width: 768px) {} */
+@media (min-width: 768px) {
+  .c-calendar__courselist .c-calendar__course:nth-child(1) .c-calendar__course-name {
+    visibility: hidden;
+  }
+  .c-calendar__courselist .c-calendar__course:nth-child(odd),
+  .c-calendar__weekday .c-weekday:nth-child(odd) {
+    background: darkgrey;
+    width: 100%;
+  }
+  .c-calendar__courselist .c-calendar__course:nth-child(even),
+  .c-calendar__weekday .c-weekday:nth-child(even) {
+    background: grey;
+    width: 100%;
+  }
+  .c-calendar__courselist .c-calendar__course:nth-child(1),
+  .c-calendar__weekday .c-weekday:nth-child(1) {
+    background: firebrick;
+  }
+}
 
 /* Large devices */
 /* @media (min-width: 992px) {} */
