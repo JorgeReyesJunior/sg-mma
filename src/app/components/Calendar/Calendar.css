@@ -119,6 +119,9 @@
   list-style: none;
   border-left: 1px solid black;
 }
+.c-weekday--s-screen .c-weekday__course-schedule {
+  display: grid;
+}
 .c-weekday--s-screen .c-weekday__times {
   align-self: center;
   margin: 10px auto;
