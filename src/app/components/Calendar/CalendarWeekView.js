@@ -102,7 +102,17 @@ function CalendarWeekView(props) {
                             <ul className="c-weekday__schedule">
                               {
                                 course.scheduleTimes.map((times, i)=> {
-                                  return <p className="c-weekday__times" key={i*i}>{`${times.startTime} - ${times.startTime}`}</p>
+                                  let { startTime, endTime } = times;
+
+                                  if(startTime && endTime) {
+                                    return (
+                                      <li className="c-weekday__course-schedule" key={i*i}>
+                                        <p className="c-weekday__times">{`${times.startTime} - ${times.startTime}`}</p>
+                                      </li>
+                                    )
+                                  } else {
+                                    return null;
+                                  }
                                 })
                               }
                             </ul>
