@@ -42,19 +42,19 @@ function App() {
       <Header />
       <main className="o-app__main">
         <Switch>
-          <Route exact path="/sg-mma">
+          <Route exact path="/artemis-academy">
             <Home />
           </Route>
-          <Route exact path="/sg-mma-about">
+          <Route exact path="/artemis-academy-about">
             <About />
           </Route>
-          <Route exact path="/sg-mma-news-and-events">
+          <Route exact path="/artemis-academy-news-and-events">
             <NewsAndEvents />
           </Route>
-          <Route exact path="/sg-mma-shop">
+          <Route exact path="/artemis-academy-shop">
             <Shop />
           </Route>
-          <Route exact path="/sg-mma-testimonials">
+          <Route exact path="/artemis-academy-testimonials">
             <Testimonials />
           </Route>
         </Switch>
