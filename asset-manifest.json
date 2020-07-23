@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/sg-mma/static/css/main.8c089075.chunk.css",
-    "main.js": "/sg-mma/static/js/main.5d8c57d6.chunk.js",
-    "main.js.map": "/sg-mma/static/js/main.5d8c57d6.chunk.js.map",
+    "main.js": "/sg-mma/static/js/main.18823109.chunk.js",
+    "main.js.map": "/sg-mma/static/js/main.18823109.chunk.js.map",
     "runtime-main.js": "/sg-mma/static/js/runtime-main.c00b4635.js",
     "runtime-main.js.map": "/sg-mma/static/js/runtime-main.c00b4635.js.map",
     "static/js/2.964c4723.chunk.js": "/sg-mma/static/js/2.964c4723.chunk.js",
     "static/js/2.964c4723.chunk.js.map": "/sg-mma/static/js/2.964c4723.chunk.js.map",
     "index.html": "/sg-mma/index.html",
-    "precache-manifest.07ad31b635630e3b4393c43ef6e2bc25.js": "/sg-mma/precache-manifest.07ad31b635630e3b4393c43ef6e2bc25.js",
+    "precache-manifest.866f442a386e1010890b15e6a0beb534.js": "/sg-mma/precache-manifest.866f442a386e1010890b15e6a0beb534.js",
     "service-worker.js": "/sg-mma/service-worker.js",
     "static/css/main.8c089075.chunk.css.map": "/sg-mma/static/css/main.8c089075.chunk.css.map",
     "static/js/2.964c4723.chunk.js.LICENSE.txt": "/sg-mma/static/js/2.964c4723.chunk.js.LICENSE.txt",
@@ -23,6 +23,6 @@
     "static/js/runtime-main.c00b4635.js",
     "static/js/2.964c4723.chunk.js",
     "static/css/main.8c089075.chunk.css",
-    "static/js/main.5d8c57d6.chunk.js"
+    "static/js/main.18823109.chunk.js"
   ]
 }
