@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/sg-mma/static/css/main.8c089075.chunk.css",
-    "main.js": "/sg-mma/static/js/main.18823109.chunk.js",
-    "main.js.map": "/sg-mma/static/js/main.18823109.chunk.js.map",
-    "runtime-main.js": "/sg-mma/static/js/runtime-main.c00b4635.js",
-    "runtime-main.js.map": "/sg-mma/static/js/runtime-main.c00b4635.js.map",
-    "static/js/2.964c4723.chunk.js": "/sg-mma/static/js/2.964c4723.chunk.js",
-    "static/js/2.964c4723.chunk.js.map": "/sg-mma/static/js/2.964c4723.chunk.js.map",
-    "index.html": "/sg-mma/index.html",
-    "precache-manifest.866f442a386e1010890b15e6a0beb534.js": "/sg-mma/precache-manifest.866f442a386e1010890b15e6a0beb534.js",
-    "service-worker.js": "/sg-mma/service-worker.js",
-    "static/css/main.8c089075.chunk.css.map": "/sg-mma/static/css/main.8c089075.chunk.css.map",
-    "static/js/2.964c4723.chunk.js.LICENSE.txt": "/sg-mma/static/js/2.964c4723.chunk.js.LICENSE.txt",
-    "static/media/chevron-icon.svg": "/sg-mma/static/media/chevron-icon.4140ff2e.svg",
-    "static/media/close-icon.svg": "/sg-mma/static/media/close-icon.40e9c520.svg",
-    "static/media/logo-v2.png": "/sg-mma/static/media/logo-v2.ab3ed4c8.png",
-    "static/media/map-pin-icon.svg": "/sg-mma/static/media/map-pin-icon.1621cf60.svg",
-    "static/media/menu-icon.svg": "/sg-mma/static/media/menu-icon.cfce727a.svg",
-    "static/media/paper-note-icon.svg": "/sg-mma/static/media/paper-note-icon.700c17ea.svg"
+    "main.css": "/artemis-academy/static/css/main.8c089075.chunk.css",
+    "main.js": "/artemis-academy/static/js/main.1bc89ffb.chunk.js",
+    "main.js.map": "/artemis-academy/static/js/main.1bc89ffb.chunk.js.map",
+    "runtime-main.js": "/artemis-academy/static/js/runtime-main.ff583e63.js",
+    "runtime-main.js.map": "/artemis-academy/static/js/runtime-main.ff583e63.js.map",
+    "static/js/2.964c4723.chunk.js": "/artemis-academy/static/js/2.964c4723.chunk.js",
+    "static/js/2.964c4723.chunk.js.map": "/artemis-academy/static/js/2.964c4723.chunk.js.map",
+    "index.html": "/artemis-academy/index.html",
+    "precache-manifest.5ec4930030f9f2418321e631a484db56.js": "/artemis-academy/precache-manifest.5ec4930030f9f2418321e631a484db56.js",
+    "service-worker.js": "/artemis-academy/service-worker.js",
+    "static/css/main.8c089075.chunk.css.map": "/artemis-academy/static/css/main.8c089075.chunk.css.map",
+    "static/js/2.964c4723.chunk.js.LICENSE.txt": "/artemis-academy/static/js/2.964c4723.chunk.js.LICENSE.txt",
+    "static/media/chevron-icon.svg": "/artemis-academy/static/media/chevron-icon.4140ff2e.svg",
+    "static/media/close-icon.svg": "/artemis-academy/static/media/close-icon.40e9c520.svg",
+    "static/media/logo-v2.png": "/artemis-academy/static/media/logo-v2.ab3ed4c8.png",
+    "static/media/map-pin-icon.svg": "/artemis-academy/static/media/map-pin-icon.1621cf60.svg",
+    "static/media/menu-icon.svg": "/artemis-academy/static/media/menu-icon.cfce727a.svg",
+    "static/media/paper-note-icon.svg": "/artemis-academy/static/media/paper-note-icon.700c17ea.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c00b4635.js",
+    "static/js/runtime-main.ff583e63.js",
     "static/js/2.964c4723.chunk.js",
     "static/css/main.8c089075.chunk.css",
-    "static/js/main.18823109.chunk.js"
+    "static/js/main.1bc89ffb.chunk.js"
   ]
 }
