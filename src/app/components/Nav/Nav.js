@@ -13,10 +13,10 @@ function Nav(props) {
     <nav className={navState()} ref={dropdownMenu}>
       <ul className="c-nav__list">
         <li className="c-nav__listing" onClick={props.toggleMenu}>
-          <Link to="/" className="c-nav__anchor">Home</Link>
+          <Link to="/sg-mma" className="c-nav__anchor">Home</Link>
         </li>
         <li className="c-nav__listing" onClick={props.toggleMenu}>
-          <Link to="/about" className="c-nav__anchor">About</Link>
+          <Link to="/sg-mma-about" className="c-nav__anchor">About</Link>
         </li>
         <li className="c-nav__listing" onClick={props.toggleMenu}>
           <Link to="/#curriculum" className="c-nav__anchor">Curriculum</Link>

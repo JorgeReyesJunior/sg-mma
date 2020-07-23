@@ -42,10 +42,10 @@ function App() {
       <Header />
       <main className="o-app__main">
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/sg-mma">
             <Home />
           </Route>
-          <Route exact path="/about">
+          <Route exact path="/sg-mma-about">
             <About />
           </Route>
           <Route exact path="/news-and-events">
